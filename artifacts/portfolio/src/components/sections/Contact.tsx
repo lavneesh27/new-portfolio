@@ -16,7 +16,7 @@ const socials = [
   },
   {
     label: 'LeetCode',
-    href: 'https://leetcode.com',
+    href: 'https://leetcode.com/u/lavneeshrajput/',
     icon: SiLeetcode,
   },
 ];
