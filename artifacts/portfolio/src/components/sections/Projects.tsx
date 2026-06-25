@@ -8,14 +8,14 @@ const projects = [
     description:
       'Responsive social media web app inspired by Twitter/X. Modular Angular components, dynamic feed rendering, and real-time messaging & post sharing via Socket.IO. Focused on scalable architecture and a clean user experience.',
     tags: ['ASP.NET Core', 'Angular', 'TypeScript', 'HTML/CSS', 'REST API', 'Socket.IO'],
-    links: { github: 'https://github.com/lavneesh27', live: null },
+    links: { github: 'https://github.com/lavneesh27/twitter-clone', live: null },
   },
   {
     title: 'E-Commerce Platform',
     description:
       'Full-stack e-commerce application with authentication, REST APIs, product catalogue, and cart management. Responsive modular architecture with optimised database operations throughout.',
     tags: ['ASP.NET Core', 'Web API', 'C#', 'MS SQL Server', 'Angular'],
-    links: { github: 'https://github.com/lavneesh27', live: null },
+    links: { github: 'https://github.com/lavneesh27/e-commerce', live: null },
   },
   {
     title: 'SaaS Risk & Cost Monitor',
@@ -83,7 +83,7 @@ export function Projects() {
                         </span>
                       )}
                     </div>
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 items-center">
                       {project.links.github && (
                         <a
                           href={project.links.github}
@@ -105,6 +105,11 @@ export function Projects() {
                         >
                           <ExternalLink className="w-5 h-5" />
                         </a>
+                      )}
+                      {project.workProject && !project.links.github && !project.links.live && (
+                        <span className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-white/40 border border-white/10">
+                          Private / NDA
+                        </span>
                       )}
                     </div>
                   </div>
