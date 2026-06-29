@@ -8,7 +8,7 @@ const projects = [
     description:
       'Responsive social media web app inspired by Twitter/X. Modular Angular components, dynamic feed rendering, and real-time messaging & post sharing via Socket.IO. Focused on scalable architecture and a clean user experience.',
     tags: ['ASP.NET Core', 'Angular', 'TypeScript', 'HTML/CSS', 'REST API', 'Socket.IO'],
-    links: { github: 'https://github.com/lavneesh27/twitter-clone', live: null },
+    links: { github: 'https://github.com/lavneesh27/Twitter-clone-dotnet', live: 'https://project-anidb.vercel.app/' },
   },
   {
     title: 'E-Commerce Platform',
