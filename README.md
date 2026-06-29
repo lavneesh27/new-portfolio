@@ -4,7 +4,9 @@ Personal portfolio website built with React, Vite, Three.js, and Framer Motion.
 
 ## Live
 
-**[https://8b3eb666-2f58-4ba2-9869-e4e05cd13cec-00-7pvp6un0huij.pike.replit.dev](https://8b3eb666-2f58-4ba2-9869-e4e05cd13cec-00-7pvp6un0huij.pike.replit.dev)**
+**[https://lavneesh27.github.io/new-portfolio/](https://lavneesh27.github.io/new-portfolio/)**
+
+> Auto-deployed to GitHub Pages on every push via GitHub Actions.
 
 ## Tech Stack
 
