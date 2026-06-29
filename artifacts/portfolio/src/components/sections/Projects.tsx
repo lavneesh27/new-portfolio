@@ -70,25 +70,9 @@ export function Projects() {
             >
               <GlassCard animatedBorder={idx === 0} className="h-full flex flex-col justify-between">
                 <div>
-                  <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                  <div className="flex justify-between items-center mb-4">
-                    <div className="flex items-center gap-2">
-                      {project.workProject && (
-                        <span
-                          title="Professional project"
-                          className="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-primary/15 text-primary border border-primary/20"
-                        >
-                          <Briefcase className="w-3 h-3" />
-                          Work
-                        </span>
-                      )}
-                      {project.workProject && !project.links.github && !project.links.live && (
-                        <span className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-white/40 border border-white/10">
-                          Private / NDA
-                        </span>
-                      )}
-                    </div>
-                    <div className="flex gap-3 items-center">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-2xl font-bold leading-snug">{project.title}</h3>
+                    <div className="flex gap-3 items-center shrink-0 ml-4 mt-1">
                       {project.links.github && (
                         <a
                           href={project.links.github}
@@ -113,6 +97,23 @@ export function Projects() {
                       )}
                     </div>
                   </div>
+                  {project.workProject && (
+                    <div className="flex items-center gap-2 mb-4">
+                      <span
+                        title="Professional project"
+                        className="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-primary/15 text-primary border border-primary/20"
+                      >
+                        <Briefcase className="w-3 h-3" />
+                        Work
+                      </span>
+                      {!project.links.github && !project.links.live && (
+                        <span className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-white/40 border border-white/10">
+                          Private / NDA
+                        </span>
+                      )}
+                    </div>
+                  )}
+                  {!project.workProject && <div className="mb-4" />}
                   <p className="text-muted-foreground mb-8 text-base leading-relaxed">
                     {project.description}
                   </p>
