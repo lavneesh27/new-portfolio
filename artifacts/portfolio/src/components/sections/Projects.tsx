@@ -70,9 +70,9 @@ export function Projects() {
             >
               <GlassCard animatedBorder={idx === 0} className="h-full flex flex-col justify-between">
                 <div>
-                  <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
+                  <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center gap-2">
-                      <h3 className="text-2xl font-bold">{project.title}</h3>
                       {project.workProject && (
                         <span
                           title="Professional project"
@@ -80,6 +80,11 @@ export function Projects() {
                         >
                           <Briefcase className="w-3 h-3" />
                           Work
+                        </span>
+                      )}
+                      {project.workProject && !project.links.github && !project.links.live && (
+                        <span className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-white/40 border border-white/10">
+                          Private / NDA
                         </span>
                       )}
                     </div>
@@ -105,11 +110,6 @@ export function Projects() {
                         >
                           <ExternalLink className="w-5 h-5" />
                         </a>
-                      )}
-                      {project.workProject && !project.links.github && !project.links.live && (
-                        <span className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-white/40 border border-white/10">
-                          Private / NDA
-                        </span>
                       )}
                     </div>
                   </div>
